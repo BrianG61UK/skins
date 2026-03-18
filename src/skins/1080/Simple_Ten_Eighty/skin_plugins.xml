@@ -2466,7 +2466,10 @@
 		<widget conditional="progress" source="progress" render="Progress" position="30,542" size="720,18" backgroundColor="background" foregroundColor="blue" zPosition="11" borderWidth="0" borderColor="grey" cornerRadius="5"/>
 		<widget source="list" render="Listbox" position="780,105" size="1110,900" transparent="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (60,0), size = (1035,60), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1) ],
+				{"template": [
+						MultiContentEntryText(pos = (60,0), size = (1035,60), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the name
+						MultiContentEntryPixmapAlphaBlend(pos = (10,15), size = (30,30), png = 2, flags=BT_HALIGN_CENTER | BT_VALIGN_CENTER | BT_SCALE | BT_KEEP_ASPECT_RATIO), # index 2 is the pixmap
+					],
 					"fonts": [gFont("Regular",36)],
 					"itemHeight": 60
 				}
