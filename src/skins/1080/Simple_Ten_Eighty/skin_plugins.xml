@@ -2467,6 +2467,25 @@
 		<widget source="list" render="Listbox" position="780,105" size="1110,900" transparent="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
+						MultiContentEntryText(pos = (30,0), size = (520,60), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the name
+						MultiContentEntryText(pos = (558,0), size = (330,60), font=1, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 4),
+						MultiContentEntryPixmapAlphaBlend(pos = (908,9), size = (42,42), flags = BT_SCALE | BT_KEEP_ASPECT_RATIO, png = 3),
+						MultiContentEntryPixmapAlphaBlend(pos = (970,15), size = (132,30), png = 2, flags=BT_SCALE | BT_KEEP_ASPECT_RATIO), # index 2 is the pixmap
+					],
+					"fonts": [gFont("Regular",36), gFont("Regular",25)],
+					"itemHeight": 60
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="M3UIPTVVoDMovies" position="fill" flags="wfNoBorder">
+		<panel name="PigTemplate"/>
+		<panel name="DescriptionTemplate"/>
+		<widget conditional="progress" source="progress" render="Progress" position="30,542" size="720,18" backgroundColor="background" foregroundColor="blue" zPosition="11" borderWidth="0" borderColor="grey" cornerRadius="5"/>
+		<widget source="list" render="Listbox" position="780,105" size="1110,900" transparent="1" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
 						MultiContentEntryText(pos = (60,0), size = (1035,60), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the name
 						MultiContentEntryPixmapAlphaBlend(pos = (10,15), size = (30,30), png = 2, flags=BT_HALIGN_CENTER | BT_VALIGN_CENTER | BT_SCALE | BT_KEEP_ASPECT_RATIO), # index 2 is the pixmap
 					],
@@ -2475,10 +2494,6 @@
 				}
 			</convert>
 		</widget>
-	</screen>
-
-	<screen name="M3UIPTVVoDMovies" position="fill" flags="wfNoBorder">
-		<panel name="M3UIPTVManagerConfig"/>
 	</screen>
 
 	<screen name="CatchupPlayer" position="150,67" size="1620,150" backgroundColor="secondBG" flags="wfNoBorder">
