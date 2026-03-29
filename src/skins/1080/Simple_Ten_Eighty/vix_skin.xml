@@ -160,8 +160,9 @@
 	<!--Softwareupdate choices -->
 	<screen name="SoftwareUpdateChoices" position="fill" flags="wfNoBorder">
 		<panel name="SetupPanelPIG"/>
-		<widget name="text" position="780,800" size="1110,200" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="bottom"/>
+		<widget name="text" position="820,800" size="1070,200" font="Regular;33" zPosition="2" foregroundColor="secondFG" valign="bottom"/>
 		<panel name="FeedsStatusTemplate"/>
+		<widget name="description" position="30,550" size="720,240" font="Regular;32" valign="top" halign="block"/>
 	</screen>
 
 	<!-- SystemNetworkInfo -->

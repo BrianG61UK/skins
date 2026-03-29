@@ -360,11 +360,11 @@
 
 	<!-- Feeds status template -->
 	<screen name="FeedsStatusTemplate" position="fill" flags="wfNoBorder">
-		<widget name="feedStatusMSG" conditional="feedStatusMSG" position="7,568" size="715,45" font="Regular;33" zPosition="2" foregroundColor="secondFG" halign="center"/>
-		<widget name="tl_off" pixmap="icons/aoff.png" position="350,632" size="36,97" alphatest="on"/>
-		<widget name="tl_red" pixmap="icons/ared.png" position="350,632" size="36,97" alphatest="on"/>
-		<widget name="tl_yellow" pixmap="icons/ayellow.png" position="350,632" size="36,97" alphatest="on"/>
-		<widget name="tl_green" pixmap="icons/agreen.png" position="350,632" size="36,97" alphatest="on"/>
+		<widget name="feedStatusMSG" conditional="feedStatusMSG" position="7,790" size="715,45" font="Regular;33" zPosition="2" foregroundColor="secondFG" halign="center"/>
+		<widget name="tl_off" pixmap="icons/aoff.png" position="350,850" size="36,97" alphatest="on"/>
+		<widget name="tl_red" pixmap="icons/ared.png" position="350,850" size="36,97" alphatest="on"/>
+		<widget name="tl_yellow" pixmap="icons/ayellow.png" position="350,850" size="36,97" alphatest="on"/>
+		<widget name="tl_green" pixmap="icons/agreen.png" position="350,850" size="36,97" alphatest="on"/>
 	</screen>
 
 	<!-- Slider template -->
