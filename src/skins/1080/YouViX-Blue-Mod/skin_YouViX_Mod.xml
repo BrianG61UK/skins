@@ -2481,8 +2481,8 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 	<!-- ## Movie Bar ## -->
 	<screen name="MoviePlayer" flags="wfNoBorder" position="0,0" size="1920,400" title="Movie player" backgroundColor="transparent">
 		<panel name="PlayerTemplate"/>
-		<widget name="statusicon" position="276,120" size="25,25" pixmaps="pvr/play.png,pvr/pause.png,pvr/stop.png,pvr/forward.png,pvr/backward.png,pvr/slow.png,pvr/blank.png" zPosition="1" alphatest="blend" />
-		<widget name="speed" position="306,113" size="60,38" font="youvix-r;25" foregroundColor="white" backgroundColor="background2" transparent="1" zPosition="4" valign="center" />
+		<widget name="statusicon" position="300,108" size="50,50" pixmaps="pvr/play.png,pvr/pause.png,pvr/stop.png,pvr/forward.png,pvr/backward.png,pvr/slow.png,pvr/blank.png" zPosition="1" alphatest="blend" scale="1" />
+		<widget name="speed" position="200,106" size="90,50" font="youvix-r;38" foregroundColor="white" backgroundColor="background2" transparent="1" zPosition="4" valign="center" halign="right" />
 		<widget name="eventname" position="0,0" size="0,0"/> #To remove debug warning
 		<widget name="state" position="0,0" size="0,0"/> #To remove debug warning
 		<widget name="key_green" position="0,0" size="0,0"/> #To remove debug warning
