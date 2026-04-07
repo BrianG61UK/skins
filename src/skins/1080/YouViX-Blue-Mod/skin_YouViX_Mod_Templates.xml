@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modding done by Orlandox 20.02.2026 -->
+	<!--  Modding done by Orlandox 07.04.2026 -->
 
 	<!--  ## Head ##  -->
 
@@ -85,10 +85,10 @@
 
 	<!-- FEEDS STATUS TEMPLATE -->
 	<screen name="FeedsStatus">
-		<widget name="tl_off" pixmap="icons/tl_off.png" position="320,600" size="113,234" alphatest="blend" zPosition="1" />
-		<widget name="tl_red" pixmap="icons/tl_red.png" position="320,600" size="113,234" alphatest="blend" zPosition="1" />
-		<widget name="tl_yellow" pixmap="icons/tl_yellow.png" position="320,600" size="113,234" alphatest="blend" zPosition="1" />
-		<widget name="tl_green" pixmap="icons/tl_green.png" position="320,600" size="113,234" alphatest="blend" zPosition="1" />
+		<widget name="tl_off" pixmap="icons/tl_off.png" position="320,470" size="113,234" alphatest="blend" zPosition="1" />
+		<widget name="tl_red" pixmap="icons/tl_red.png" position="320,470" size="113,234" alphatest="blend" zPosition="1" />
+		<widget name="tl_yellow" pixmap="icons/tl_yellow.png" position="320,470" size="113,234" alphatest="blend" zPosition="1" />
+		<widget name="tl_green" pixmap="icons/tl_green.png" position="320,470" size="113,234" alphatest="blend" zPosition="1" />
 		<widget name="feedStatusMSG" conditional="feedStatusMSG" position="80,850" size="590,38" font="youvix-r;24" foregroundColor="white" backgroundColor="menubackground" transparent="1" halign="center" valign="center" zPosition="1" />
 	</screen>
 
