@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 10.04.2026 -->
+	<!--  Modified by Orlandox 14.04.2026 -->
 
 	<!--  ## Head ##  -->
 
@@ -788,7 +788,7 @@
 		<widget name="AboutScrollLabel" position="750,232" size="1050,693" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 10.04.2026 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 14.04.2026 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="SystemNetworkInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -2398,7 +2398,7 @@
 	<screen name="MessageBox" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMyMessagesText" />
-		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png" position="250,210" size="256,256" alphatest="blend" zPosition="1" />
+		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="250,210" size="256,256" alphatest="blend" zPosition="1" />
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="250,210" size="256,256" alphatest="blend" zPosition="1" />
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="250,210" size="256,256" alphatest="blend" zPosition="1" />
 		<widget name="WarningPixmap" pixmap="icons/input_warning.png" position="250,210" size="256,256" alphatest="blend" zPosition="1" />
@@ -2409,7 +2409,7 @@
 	<screen name="MessageBoxSimple" position="center,center" size="960,150" title="Message" zPosition="10" flags="wfNoBorder" backgroundColor="menubackground">
 		<widget source="Title" render="Label" position="100,10" size="250,34" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" zPosition="1" font="youvix-b;28" valign="center" halign="left"/>
 		<widget name="text" position="110,50" size="780,0" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="2"/>
-		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png" position="5,5" size="100,100" alphatest="blend" zPosition="1" scale="1" />
+		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="5,5" size="100,100" alphatest="blend" zPosition="1" scale="1" />
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="5,5" size="100,100" alphatest="blend" zPosition="1" scale="1" />
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="5,5" size="100,100" alphatest="blend" zPosition="1" scale="1" />
 		<widget name="WarningPixmap" pixmap="icons/input_warning.png" position="5,5" size="100,100" alphatest="blend" zPosition="1" scale="1" />
