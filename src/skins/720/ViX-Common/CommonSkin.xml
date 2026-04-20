@@ -894,6 +894,8 @@ self.autoResize()
 	</screen>
 	<screen name="MessageBoxTemplate">
 		<widget name="text" position="65,8" size="520,0" font="Regular;22"/>
+		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="0,0" size="53,53" alphatest="blend" conditional="icon"/>
+		<!-- ErrorPixmap, QuestionPixmap, InfoPixmap, WarningPixmap no longer used by openatv, openvix -->
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="0,0" size="53,53" alphatest="on"/>
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="0,0" size="53,53" alphatest="on"/>
 		<widget name="WarningPixmap" pixmap="icons/input_warning.png" position="0,0" size="53,53" alphatest="on"/>

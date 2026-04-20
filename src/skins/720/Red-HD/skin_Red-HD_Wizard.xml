@@ -157,6 +157,8 @@
 		<panel name="MenuSourceTitle" />
 		<panel name="MenuBlackBackgroundBox" />
 		<panel name="WizardText" />
+		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="100,140" size="53,53" alphatest="blend" conditional="icon"/>
+		<!-- ErrorPixmap, QuestionPixmap, InfoPixmap, WarningPixmap no longer used by openatv, openvix -->
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="100,140" size="53,53" alphatest="blend" />
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="100,140" size="53,53" alphatest="blend" />
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="100,140" size="53,53" alphatest="blend" />

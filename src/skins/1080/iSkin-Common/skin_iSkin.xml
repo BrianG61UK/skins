@@ -1761,6 +1761,8 @@
 	<screen name="MessageBox" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black">
 		<panel name="TopBar" />
 		<panel name="SetupScreen" />
+		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="830,51" size="128,128" alphatest="blend" conditional="icon"/>
+		<!-- ErrorPixmap, QuestionPixmap, InfoPixmap, WarningPixmap no longer used by openatv, openvix -->
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="830,51" size="128,128" alphatest="blend" zPosition="2" />
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="830,51" size="128,128" alphatest="blend" zPosition="2" />
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="830,51" size="128,128" alphatest="blend" zPosition="2" />

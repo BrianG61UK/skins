@@ -1091,9 +1091,11 @@
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="420,129" size="900,60" font="screentitle;46" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
-		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="1380,69" size="130,123" alphatest="blend" zPosition="2" />
-		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="1380,69" size="130,123" alphatest="blend" zPosition="2" />
-		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="1380,69" size="130,123" alphatest="blend" zPosition="2" />
+		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="1380,69" size="130,123" alphatest="blend" conditional="icon"/>
+		<!-- ErrorPixmap, QuestionPixmap, InfoPixmap, WarningPixmap no longer used by openatv, openvix -->
+		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="1380,69" size="130,123" alphatest="blend" zPosition="2"/>
+		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="1380,69" size="130,123" alphatest="blend" zPosition="2"/>
+		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="1380,69" size="130,123" alphatest="blend" zPosition="2"/>
 		<widget name="text" position="420,200" size="1080,790" font="menulist;32" foregroundColor="maincolour" backgroundColor="menubackground" valign="center" halign="center" transparent="1" zPosition="2" />	
 		<widget name="list" position="420,1015" size="1080,0" font="menulist;34" itemHeight="50" foregroundColor="maincolour" backgroundColor="menubackground" transparent="1" zPosition="2"/>
 		<applet type="onLayoutFinish">

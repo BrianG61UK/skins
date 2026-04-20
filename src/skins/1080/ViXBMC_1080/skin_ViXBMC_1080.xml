@@ -1112,6 +1112,8 @@
 		<widget source="Title" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=3,always=0,oneshot=1,startdelay=8000" position="420,129" size="900,60" font="screentitle;46" foregroundColor="secondcolour" backgroundColor="menubackground" transparent="1" halign="left" valign="center" zPosition="2"/>
 		<eLabel position="1380,69" size="130,123" backgroundColor="menubackground" zPosition="1" />
 		<eLabel position="410,195" size="1100,565" backgroundColor="menubackground" zPosition="-1" />
+		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="1380,69" size="130,123" alphatest="blend" conditional="icon"/>
+		<!-- ErrorPixmap, QuestionPixmap, InfoPixmap, WarningPixmap no longer used by openatv, openvix -->
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="1380,69" size="130,123" alphatest="blend" zPosition="2" />
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="1380,69" size="130,123" alphatest="blend" zPosition="2" />
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="1380,69" size="130,123" alphatest="blend" zPosition="2" />

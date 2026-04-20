@@ -1855,6 +1855,8 @@
 	<screen name="MessageBox" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BigMenuPanel" />
 		<panel name="MenuMyMessagesText" />
+		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="250,210" size="256,256" alphatest="blend" conditional="icon"/>
+		<!-- ErrorPixmap, QuestionPixmap, InfoPixmap, WarningPixmap no longer used by openatv, openvix -->
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="250,210" size="256,256" alphatest="blend" zPosition="1" />
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="250,210" size="256,256" alphatest="blend" zPosition="1" />
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="250,210" size="256,256" alphatest="blend" zPosition="1" />
