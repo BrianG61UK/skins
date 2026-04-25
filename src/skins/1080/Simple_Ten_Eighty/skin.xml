@@ -1423,9 +1423,10 @@
 		<panel position="right" size="10,*"/>
 		<panel position="top" size="*,400">
 			<panel position="left" size="90,*">
-				<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="0,0" size="80,80" alphatest="blend"/>
-				<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="0,0" size="80,80" alphatest="blend"/>
-				<widget name="InfoPixmap" pixmap="icons/input_info.png" position="0,0" size="80,80" alphatest="blend"/>
+				<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="0,0" size="80,80" alphatest="blend" conditional="icon" zPosition="2"/>
+				<widget name="ErrorPixmap" conditional="ErrorPixmap" pixmap="icons/input_error.png" position="0,0" size="80,80" alphatest="blend"/>
+				<widget name="QuestionPixmap" conditional="QuestionPixmap" pixmap="icons/input_question.png" position="0,0" size="80,80" alphatest="blend"/>
+				<widget name="InfoPixmap" conditional="InfoPixmap" pixmap="icons/input_info.png" position="0,0" size="80,80" alphatest="blend"/>
 			</panel>
 			<widget name="text" position="fill" font="Regular;34"/>
 		</panel>
