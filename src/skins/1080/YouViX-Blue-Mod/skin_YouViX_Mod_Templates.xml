@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modding done by Orlandox 07.04.2026 -->
+	<!--  Modding done by Orlandox 03.05.2026 -->
 
 	<!--  ## Head ##  -->
 
@@ -147,13 +147,13 @@
 		</widget>
 	</screen>
 	<screen name="InfobarProgramNowRemainingTime">
-		<widget source="session.Event_Now" render="Label" position="1575,932" size="200,39" font="youvix-r;30" foregroundColor="white" backgroundColor="lightcolour" transparent="1" noWrap="1" valign="center">
+		<widget source="session.Event_Now" render="Label" position="1575,922" size="160,70" font="youvix-r;30" foregroundColor="white" backgroundColor="lightcolour" transparent="1" noWrap="0" valign="center">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 	</screen>
 	<screen name="InfobarInfoIcon">
-		<ePixmap position="1535,934" size="35,35" pixmap="icons/info.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="1535,936" size="35,35" pixmap="icons/info.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="InfobarStatusIcons">
 		<widget source="session.Event_Now" render="Pixmap" pixmap="icons/ico_pdc.png" position="650,990" size="60,28" zPosition="1" alphatest="blend">
