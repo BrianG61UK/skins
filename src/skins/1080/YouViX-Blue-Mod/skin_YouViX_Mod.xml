@@ -2406,7 +2406,7 @@
 		<widget name="text" position="680,165" size="1160,17*44" font="youvix-r;32" foregroundColor="white" backgroundColor="menubackground" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget name="list" position="80,600" size="590,210" font="youvix-r;24" itemHeight="35" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
 	</screen>
-		<screen name="MessageBoxSimple" position="center,center" size="960,15" zPosition="10" flags="wfNoBorder">
+	<screen name="MessageBoxSimple" position="center,center" size="960,15" zPosition="10" flags="wfNoBorder">
 		<widget source="Title" render="Label" position="3,3" size="300,32" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" zPosition="1" font="youvix-b;28" valign="center" halign="left"/>
 		<widget name="text" position="100,12" size="780,0" font="youvix-r;32" zPosition="2"/>
 		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="10,5" size="100,100" alphatest="blend" conditional="icon" scale="1" zPosition="2"/>
@@ -2414,9 +2414,9 @@
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="10,5" size="100,100" alphatest="blend" conditional="QuestionPixmap" scale="1" zPosition="2"/>
 		<widget name="WarningPixmap" pixmap="icons/input_warning.png" position="10,5" size="100,100" alphatest="blend" conditional="WarningPixmap" scale="1" zPosition="2"/>
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="10,5" size="100,100" alphatest="blend" conditional="InfoPixmap" scale="1" zPosition="2"/>
-		<widget name="list" position="150,150" size="720,570" itemHeight="38" font="youvix-r;28" zPosition="3"/>
+		<widget name="list" position="150,150" size="720,570" itemHeight="38" font="youvix-r;28" zPosition="3" scrollbarMode="showOnDemand"/>
 	<applet type="onLayoutFinish">
-from enigma import eSize, ePoint, eListbox
+from enigma import eSize, ePoint
 if self.timerRunning:
 	titleheight = 32
 else:
@@ -2432,10 +2432,8 @@ textsize = (textsize[0] + 76, textsize[1] + 30)
 wsizex = textsize[0] + 110
 wsizey = textsize[1]
 lenlist = len(self.list)*38
-scrollbar = False
 if (lenlist &gt; 190):
 	lenlist = 190
-	scrollbar = True
 if (96 &gt; wsizey):
 	wsizey = 96
 if self.type == self.TYPE_YESNO:
@@ -2465,10 +2463,6 @@ if self.type == self.TYPE_YESNO:
 	listsize = (wsizex-6, lenlist)
 	self[&quot;list&quot;].instance.move(ePoint(3, int(wsizey - lenlist + titleheight - 3)))
 	self[&quot;list&quot;].instance.resize(eSize(*listsize))
-	if scrollbar:
-		self[&quot;list&quot;].instance.setScrollbarMode(eListbox.showAlways)
-		self[&quot;list&quot;].instance.moveSelection(self[&quot;list&quot;].instance.moveUp)
-		self[&quot;list&quot;].instance.moveSelection(self[&quot;list&quot;].instance.moveDown)
 newwidth = wsize[0]
 self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgpos.y() + (orgheight - wsizey) // 2)))
 	</applet>
