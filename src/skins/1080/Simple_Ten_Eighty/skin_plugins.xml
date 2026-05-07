@@ -2574,4 +2574,48 @@
 		<widget name="poster" position="735,235" size="468,675" zPosition="5" cornerRadius="25" backgroundColor="black" transparent="1" alphatest="blend"/>
 		<widget name="info" position="1223,235" size="619,675" zPosition="5" font="Regular;27" transparent="1" />
 	</screen>
+
+	<screen name="FileCommanderScreen" position="fill" flags="wfNoBorder">
+		<panel name="PigLessTemplate"/>
+		<panel position="30,123" size="1860,855">
+			<widget name="list_left_head1" position="10,5" size="890,28" itemHeight="28" font="Regular;24" foregroundColor="#00cccc40"/>
+			<widget name="list_left_filename" position="10,31" size="890,21" font="Regular;18" noWrap="1" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1"/>
+			<widget name="list_left_select" position="10,50" size="890,30" zPosition="1" font="Regular;24" transparent="1" foregroundColor="#0000cc60"/>
+			<widget source="list_left_head2" render="Listbox" position="10,50" size="890,30" foregroundColor="#00cccc40" selectionDisabled="1" transparent="1">
+				<convert type="TemplatedMultiContent">
+					{"template": [
+						MultiContentEntryText(pos = (30, 0), size = (173, 30), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
+						MultiContentEntryText(pos = (250, 0), size = (135, 30), font = 0, flags = RT_HALIGN_RIGHT, text = 11), # index 11 is the scaled size
+						MultiContentEntryText(pos = (500, 0), size = (390, 30), font = 0, flags = RT_HALIGN_LEFT, text = 15), # index 15 is the modification time
+						],
+						"fonts": [gFont("Regular", 24)],
+						"itemHeight": 30,
+						"selectionEnabled": False
+					}
+				</convert>
+			</widget>
+			<widget name="list_right_head1" position="900,5" size="890,28" itemHeight="28" font="Regular;24" foregroundColor="#00cccc40"/>
+			<widget name="list_right_filename" position="900,31" size="890,21" font="Regular;18" noWrap="1" foregroundColor="grey" backgroundColor="secondBG" transparent="1" zPosition="1"/>
+			<widget name="list_right_select" position="900,50" size="890,30" zPosition="1" font="Regular;24" transparent="1" foregroundColor="#0000cc60"/>
+			<widget source="list_right_head2" render="Listbox" position="900,50" size="890,30" foregroundColor="#00cccc40" selectionDisabled="1" transparent="1">
+				<convert type="TemplatedMultiContent">
+					{"template": [
+						MultiContentEntryText(pos = (30, 0), size = (173, 30), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
+						MultiContentEntryText(pos = (250, 0), size = (135, 30), font = 0, flags = RT_HALIGN_RIGHT, text = 11), # index 11 is the scaled size
+						MultiContentEntryText(pos = (500, 0), size = (390, 30), font = 0, flags = RT_HALIGN_LEFT, text = 15), # index 15 is the modification time
+						],
+						"fonts": [gFont("Regular", 24)],
+						"itemHeight": 30,
+						"selectionEnabled": False
+					}
+				</convert>
+			</widget>
+			<widget name="list_left" position="10,80" size="890,765" itemHeight="45" scrollbarMode="showOnDemand"/>
+			<widget name="list_right" position="900,80" size="890,765" itemHeight="45" scrollbarMode="showOnDemand"/>
+			<widget name="list_left_free" position="30,845" size="200,25" font="Regular;22"/><!-- for FileCommanderScreenFileSelect, do not remove it -->
+			<widget name="list_right_free" position="920,845" size="200,25" font="Regular;22"/><!-- for FileCommanderScreenFileSelect, do not remove it -->
+			<widget name="sort_left" position="10,845" size="855,26" halign="center" font="Regular;23" foregroundColor="#00cccc40"/>
+			<widget name="sort_right" position="900,845" size="855,26" halign="center" font="Regular;23" foregroundColor="#00cccc40"/>
+		</panel>
+	</screen>
 </skin>
