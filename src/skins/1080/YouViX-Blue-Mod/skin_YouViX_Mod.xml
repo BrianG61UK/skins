@@ -5065,4 +5065,24 @@ self.autoResize()
 		<widget name="icon" position="50,160" size="25,25" zPosition="2" pixmap="icons/ico_mp_play.png"  alphatest="blend" />
 		<widget source="message" render="Label" position="10,200" size="800,35" font="youvix-r;28" halign="left" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" zPosition="2" noWrap="1" />
 	</screen>
+	<screen name="FileCommanderFileStatInfo" position="fill" flags="wfNoBorder" title="File/Directory Status Information">
+		<panel name="InfoPanel" />
+		<panel name="MenuMyInfoText" />
+		<widget name="filename" position="680,160" size="1160,35" font="youvix-b;32" foregroundColor="yellow" backgroundColor="menubackground" />
+		<widget source="list" render="Listbox" position="680,210" size="1160,560" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" backgroundColor="menubackground" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (0, 0), size = (570, 40), font = 0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is a label
+					MultiContentEntryText(pos = (590, 0), size = (570, 40), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the information
+					],
+					"fonts": [gFont("Regular", 32)],
+					"itemHeight": 40,
+					"selectionEnabled": False
+				}
+			</convert>
+		</widget>
+		<widget name="link_sep" position="75,550" size="600,35" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" />
+		<widget name="link_label" position="75,590" size="600,35" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" />
+		<widget name="link_value" position="75,630" size="600,35" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" />
+	</screen>
 </skin>
