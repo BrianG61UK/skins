@@ -4,7 +4,7 @@
 	<!--  This skin is OpenSource. Anyone can modify it and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modding done by Orlandox 24.01.2026 -->
+	<!--  Modding done by Orlandox 10.05.2026 -->
 
 	<!--  ## Head ##  -->
 
@@ -90,6 +90,11 @@
 		<parameter name="TMDbListFont" value="*youvix-r,32"/>
 		<parameter name="AboutColors" value="#00ffffff,#003499cc"/> <!-- default text=white,title text=lightcolour -->
 		<parameter name="PlutoTvColors" value="#00ffffff,#003499cc"/>
+		<parameter name="FcFileListIcon" value="7,2,40,40"/>
+		<parameter name="FcFileListName" value="55,4,1000,50"/>
+		<parameter name="FcFileListMultiLock" value="4,4,36,36"/>
+		<parameter name="FcFileListMultiIcon" value="45,4,30,30"/>
+		<parameter name="FcFileListMultiName" value="90,3,1000,50"/>
 	</parameters>
 
 	<colors>
