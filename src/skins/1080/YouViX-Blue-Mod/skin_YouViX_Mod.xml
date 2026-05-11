@@ -4,7 +4,7 @@
 	<!--  This skin is a Freeware. Everyone can modify and use it in other images.  -->
 	<!--  BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!  -->
 	<!--  Do whatever you want with this skin, but don't tell it's yours, or your idea!  -->
-	<!--  Modified by Orlandox 10.05.2026 -->
+	<!--  Modified by Orlandox 11.05.2026 -->
 
 	<!--  ## Head ##  -->
 
@@ -788,7 +788,7 @@
 		<widget name="AboutScrollLabel" position="750,232" size="1050,693" font="youvix-r;28" foregroundColor="white" backgroundColor="menubackground2" transparent="1" zPosition="1" split="1" dividechar=":" colposition="0" />
 		<eLabel conditional="lab3" text="Teeman YouViX-Blue-Mod ylläpito" position="75,550" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<eLabel conditional="lab3" text="YouViX-Blue-Mod skin maintenance" position="75,590" size="600,40" font="youvix-b;32" foregroundColor="lightcolour" backgroundColor="menubackground2" halign="center" zPosition="1"/>
-		<eLabel conditional="lab3" text="--- 10.05.2026 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
+		<eLabel conditional="lab3" text="--- 11.05.2026 Orlandox ---" position="75,630" size="600,40" font="youvix-r;32" foregroundColor="yellow" backgroundColor="menubackground2" halign="center" zPosition="1"/>
 		<ePixmap position="110,700" size="500,200" pixmap="logos/YouViX-Blue-Mod.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="SystemNetworkInfo" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -2407,7 +2407,7 @@
 		<widget name="list" position="80,600" size="590,210" font="youvix-r;24" itemHeight="35" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="1" scrollbarMode="showOnDemand" />
 	</screen>
 	<screen name="MessageBoxSimple" position="center,center" size="960,15" zPosition="10" flags="wfNoBorder">
-		<widget source="Title" render="Label" position="3,3" size="300,32" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" zPosition="1" font="youvix-b;28" valign="center" halign="left"/>
+		<widget source="Title" render="Label" position="3,3" size="954,32" foregroundColor="yellow" backgroundColor="menubackground" transparent="1" zPosition="1" font="youvix-b;28" valign="center" halign="left"/>
 		<widget name="text" position="100,12" size="780,0" font="youvix-r;32" zPosition="2"/>
 		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="10,5" size="100,100" alphatest="blend" conditional="icon" scale="1" zPosition="2"/>
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="10,5" size="100,100" alphatest="blend" conditional="ErrorPixmap" scale="1" zPosition="2"/>
@@ -5012,7 +5012,54 @@ self.autoResize()
 		<panel name="BottomMenuBlock2"/>
 		<ePixmap pixmap="extensions/smallshadowline.png" position="0,149" size="1920,3" zPosition="5"/>
 		<panel position="60,160" size="1800,560">
-			<widget name="list_left_head1" position="10,5" size="890,36" itemHeight="36" font="youvix-r;30" foregroundColor="yellow"/>
+			<widget name="list_left_head1" position="10,5" size="890,36" font="youvix-r;30" foregroundColor="yellow"/>
+			<widget name="list_left_filename" position="10,45" size="890,32" font="youvix-r;28" noWrap="1" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="1"/>
+			<widget source="list_left_head2" render="Listbox" position="10,110" size="890,30" foregroundColor="yellow" selectionDisabled="1" transparent="1">
+				<convert type="TemplatedMultiContent">
+					{"template": [
+						MultiContentEntryText(pos = (30, 0), size = (173, 30), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
+						MultiContentEntryText(pos = (250, 0), size = (135, 30), font = 0, flags = RT_HALIGN_RIGHT, text = 11), # index 11 is the scaled size
+						MultiContentEntryText(pos = (500, 0), size = (390, 30), font = 0, flags = RT_HALIGN_LEFT, text = 15), # index 15 is the modification time
+						],
+						"fonts": [gFont("youvix-r", 27)],
+						"itemHeight": 30,
+						"selectionEnabled": False
+					}
+				</convert>
+			</widget>
+			<widget name="list_right_head1" position="900,5" size="890,36" font="youvix-r;30" foregroundColor="yellow"/>
+			<widget name="list_right_filename" position="900,45" size="890,32" font="youvix-r;28" noWrap="1" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="1"/>
+			<widget source="list_right_head2" render="Listbox" position="900,110" size="890,30" foregroundColor="yellow" selectionDisabled="1" transparent="1">
+				<convert type="TemplatedMultiContent">
+					{"template": [
+						MultiContentEntryText(pos = (30, 0), size = (173, 30), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
+						MultiContentEntryText(pos = (250, 0), size = (135, 30), font = 0, flags = RT_HALIGN_RIGHT, text = 11), # index 11 is the scaled size
+						MultiContentEntryText(pos = (500, 0), size = (390, 30), font = 0, flags = RT_HALIGN_LEFT, text = 15), # index 15 is the modification time
+						],
+						"fonts": [gFont("youvix-r", 27)],
+						"itemHeight": 30,
+						"selectionEnabled": False
+					}
+				</convert>
+			</widget>
+			<widget name="list_left" position="10,110" size="890,585" itemHeight="45" scrollbarMode="showOnDemand"/>
+			<widget name="list_right" position="900,110" size="890,585" itemHeight="45" scrollbarMode="showOnDemand"/>
+			<widget name="list_left_free" position="10,697" size="200,30" font="youvix-r;26"/><!-- for FileCommanderScreenFileSelect, do not remove it -->
+			<widget name="list_right_free" position="900,697" size="200,30" font="youvix-r;26"/><!-- for FileCommanderScreenFileSelect, do not remove it -->
+			<widget name="sort_left" position="10,725" size="890,30" halign="center" font="youvix-r;26" foregroundColor="lightcolour"/>
+			<widget name="sort_right" position="900,725" size="890,30" halign="center" font="youvix-r;26" foregroundColor="lightcolour"/>
+		</panel>
+	</screen>
+		<screen name="FileCommanderScreenFileSelect" position="fill" flags="wfNoBorder">
+		<panel name="MenuClock"/>
+		<panel name="MenuTitle2"/>
+		<panel name="MenuButtonBar"/>
+		<panel name="MenuKeyAutoTemplate"/>
+		<panel name="MenuMyOBHAppsPanelText"/>
+		<panel name="BottomMenuBlock2"/>
+		<ePixmap pixmap="extensions/smallshadowline.png" position="0,149" size="1920,3" zPosition="5"/>
+		<panel position="60,160" size="1800,560">
+			<widget name="list_left_head1" position="10,5" size="890,36" font="youvix-r;30" foregroundColor="yellow"/>
 			<widget name="list_left_filename" position="10,45" size="890,32" font="youvix-r;28" noWrap="1" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="1"/>
 			<widget name="list_left_select" position="10,80" size="890,30" zPosition="1" font="youvix-r;24" transparent="1" foregroundColor="yellow"/>
 			<widget source="list_left_head2" render="Listbox" position="10,110" size="890,30" foregroundColor="yellow" selectionDisabled="1" transparent="1">
@@ -5028,7 +5075,7 @@ self.autoResize()
 					}
 				</convert>
 			</widget>
-			<widget name="list_right_head1" position="900,5" size="890,36" itemHeight="36" font="youvix-r;30" foregroundColor="yellow"/>
+			<widget name="list_right_head1" position="900,5" size="890,36" font="youvix-r;30" foregroundColor="yellow"/>
 			<widget name="list_right_filename" position="900,45" size="890,32" font="youvix-r;28" noWrap="1" foregroundColor="white" backgroundColor="menubackground" transparent="1" zPosition="1"/>
 			<widget name="list_right_select" position="900,80" size="890,30" zPosition="1" font="youvix-r;24" transparent="1" foregroundColor="yellow"/>
 			<widget source="list_right_head2" render="Listbox" position="900,110" size="890,30" foregroundColor="yellow" selectionDisabled="1" transparent="1">
@@ -5048,8 +5095,8 @@ self.autoResize()
 			<widget name="list_right" position="900,110" size="890,585" itemHeight="45" scrollbarMode="showOnDemand"/>
 			<widget name="list_left_free" position="10,697" size="200,30" font="youvix-r;26"/><!-- for FileCommanderScreenFileSelect, do not remove it -->
 			<widget name="list_right_free" position="900,697" size="200,30" font="youvix-r;26"/><!-- for FileCommanderScreenFileSelect, do not remove it -->
-			<widget name="sort_left" position="10,725" size="890,30" halign="center" font="youvix-r;26" foregroundColor="#00cccc40"/>
-			<widget name="sort_right" position="900,725" size="890,30" halign="center" font="youvix-r;26" foregroundColor="#00cccc40"/>
+			<widget name="sort_left" position="10,725" size="890,30" halign="center" font="youvix-r;26" foregroundColor="lightcolour"/>
+			<widget name="sort_right" position="900,725" size="890,30" halign="center" font="youvix-r;26" foregroundColor="lightcolour"/>
 		</panel>
 	</screen>
 	<screen name="ImageViewer" position="fill" flags="wfNoBorder">
@@ -5068,14 +5115,14 @@ self.autoResize()
 	<screen name="FileCommanderFileStatInfo" position="fill" flags="wfNoBorder" title="File/Directory Status Information">
 		<panel name="InfoPanel" />
 		<panel name="MenuMyInfoText" />
-		<widget name="filename" position="680,160" size="1160,35" font="youvix-b;32" foregroundColor="yellow" backgroundColor="menubackground" />
+		<widget name="filename" position="680,160" size="1160,38" font="youvix-b;32" foregroundColor="yellow" backgroundColor="menubackground" />
 		<widget source="list" render="Listbox" position="680,210" size="1160,560" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" backgroundColor="menubackground" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos = (0, 0), size = (570, 40), font = 0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is a label
 					MultiContentEntryText(pos = (590, 0), size = (570, 40), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the information
 					],
-					"fonts": [gFont("Regular", 32)],
+					"fonts": [gFont("youvix-r", 32)],
 					"itemHeight": 40,
 					"selectionEnabled": False
 				}
@@ -5084,5 +5131,32 @@ self.autoResize()
 		<widget name="link_sep" position="75,550" size="600,35" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" />
 		<widget name="link_label" position="75,590" size="600,35" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" />
 		<widget name="link_value" position="75,630" size="600,35" font="youvix-r;28" foregroundColor="lightcolour" backgroundColor="menubackground2" />
+	</screen>
+	<screen name="ArchiverMenuScreen" position="fill" flags="wfNoBorder">
+		<panel name="MenuClock"/>
+		<panel name="MenuTitle2"/>
+		<panel name="MenuButtonBar"/>
+		<panel name="MenuKeyAutoTemplate"/>
+		<panel name="MenuMyOBHAppsPanelText"/>
+		<panel name="BottomMenuBlock2"/>
+		<ePixmap pixmap="extensions/smallshadowline.png" position="0,149" size="1920,3" zPosition="5"/>
+		<panel position="60,160" size="1600,790">
+			<widget name="list_left_head" position="10,5" size="1460,40" font="youvix-r;32" foregroundColor="yellow"/>
+			<widget name="list_left" position="10,52" size="1460,672" font="youvix-r;28" itemHeight="42" scrollbarMode="showOnDemand"/>
+			<widget name="unpacking" position="10,730" size="1460,30" font="youvix-r;28" itemHeight="42" scrollbarMode="showOnDemand" foregroundColor="yellow"/>
+		</panel>
+	</screen>
+	<screen name="ArchiverInfoScreen" position="fill" flags="wfNoBorder">
+		<panel name="MenuClock"/>
+		<panel name="MenuTitle2"/>
+		<panel name="MenuButtonBar"/>
+		<panel name="MenuKeyAutoTemplate"/>
+		<panel name="MenuMyOBHAppsPanelText"/>
+		<panel name="BottomMenuBlock2"/>
+		<ePixmap pixmap="extensions/smallshadowline.png" position="0,149" size="1920,3" zPosition="5"/>
+		<panel position="60,160" size="1600,790">
+			<widget name="list_left_head" position="10,5" size="1460,40" font="youvix-r;32" foregroundColor="yellow"/>
+			<widget name="list_left" position="10,52" size="1460,714" font="FcZipArchiver" scrollbarMode="showOnDemand"/>
+		</panel>
 	</screen>
 </skin>
